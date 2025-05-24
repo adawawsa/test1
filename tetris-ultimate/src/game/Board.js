@@ -2,8 +2,8 @@ export class Board {
     constructor(width = 10, height = 20) {
         this.width = width;
         this.height = height;
-        this.grid = this.createGrid();
         this.hiddenRows = 2; // Buffer zone above visible area
+        this.grid = this.createGrid();
     }
     
     createGrid() {

@@ -3,104 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Ultimate</title>
+    <title>Tetris Collection</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #222;
-            font-family: Arial, sans-serif;
+            min-height: 100vh;
         }
-        
-        .game-container {
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #00ffcc 0%, #ff00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .games {
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
-        
-        #game-board {
-            border: 2px solid #fff;
-            background-color: #000;
-        }
-        
-        .info-panel {
+        .game-card {
+            background: #1a1a1a;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            transition: all 0.3s ease;
+            text-decoration: none;
             color: #fff;
         }
-        
-        .info-panel h2 {
-            margin: 0 0 10px 0;
-            font-size: 20px;
+        .game-card:hover {
+            border-color: #00ffcc;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
         }
-        
-        .info-panel p {
+        .game-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #00ffcc;
+        }
+        .game-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ffcc 0%, #00ccaa 100%);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 255, 204, 0.5);
+        }
+        .features {
+            text-align: left;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        .features li {
             margin: 5px 0;
-        }
-        
-        .controls {
-            margin-top: 20px;
-            color: #fff;
-        }
-        
-        .controls h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-        }
-        
-        .controls p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        
-        #next-piece {
-            border: 1px solid #fff;
-            background-color: #000;
-            margin-top: 10px;
-        }
-        
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        
-        button:hover {
-            background-color: #45a049;
-        }
-        
-        button:disabled {
-            background-color: #666;
-            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="game-board"></canvas>
-        <div class="info-panel">
-            <h2>スコア: <span id="score">0</span></h2>
-            <h2>レベル: <span id="level">1</span></h2>
-            <h2>ライン: <span id="lines">0</span></h2>
-            <h2>次のピース:</h2>
-            <canvas id="next-piece"></canvas>
-            <button id="start-button">ゲーム開始</button>
-            <button id="pause-button" disabled>一時停止</button>
-            <div class="controls">
-                <h3>操作方法:</h3>
-                <p>← → : 左右移動</p>
-                <p>↓ : 高速落下</p>
-                <p>↑ : 回転</p>
-                <p>スペース : 即落下</p>
+    <div class="container">
+        <h1>TETRIS COLLECTION</h1>
+        <p style="font-size: 1.2rem; color: #ccc;">Choose your Tetris experience</p>
+        
+        <div class="games">
+            <div class="game-card">
+                <h2>Tetris Classic</h2>
+                <p>シンプルで楽しい、クラシックなテトリス体験</p>
+                <ul class="features">
+                    <li>✓ クラシックなゲームプレイ</li>
+                    <li>✓ シンプルな操作</li>
+                    <li>✓ スコアシステム</li>
+                    <li>✓ レベルアップ機能</li>
+                </ul>
+                <a href="tetris.html" class="play-button">PLAY CLASSIC</a>
+            </div>
+            
+            <div class="game-card">
+                <h2>Tetris Ultimate</h2>
+                <p>最高レベルの機能を備えた究極のテトリス</p>
+                <ul class="features">
+                    <li>✓ ホールド・ゴーストピース</li>
+                    <li>✓ T-Spin・パーティクル効果</li>
+                    <li>✓ AI対戦・マルチプレイヤー</li>
+                    <li>✓ ランキング・統計情報</li>
+                </ul>
+                <a href="tetris-ultimate-simple.html" class="play-button">PLAY ULTIMATE</a>
             </div>
         </div>
+        
+        <div style="margin-top: 50px;">
+            <p style="color: #666;">
+                Created with ❤️ using Claude Code<br>
+                <a href="https://github.com/adawawsa/test1" style="color: #00ffcc;">View on GitHub</a>
+            </p>
+        </div>
     </div>
-    <script src="tetris.js"></script>
 </body>
 </html>

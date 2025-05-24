@@ -56,7 +56,7 @@ export class LeaderboardManager {
                 ppm: Math.random() * 100 + 20,
                 apm: Math.random() * 150 + 30,
                 time: Math.floor(Math.random() * 600) + 60,
-                avatar: `avatar-${Math.floor(Math.random() * 10) + 1}`
+                avatar: 'assets/avatar-default.png'
             };
             
             this.addToLeaderboards(entry);

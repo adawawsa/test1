@@ -55,7 +55,7 @@ export class Game {
     
     start() {
         this.spawnPiece();
-        this.updateDisplay();
+        this.render();
         this.gameLoop();
     }
     
