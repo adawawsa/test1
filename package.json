@@ -1,0 +1,26 @@
+{
+  "name": "tetris-ultimate",
+  "version": "2.0.0",
+  "description": "Ultimate Tetris Game with Advanced Features",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write ."
+  },
+  "keywords": ["tetris", "game", "multiplayer", "ai"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "howler": "^2.2.4",
+    "socket.io-client": "^4.5.0"
+  }
+}
